@@ -1,4 +1,3 @@
-import React from 'react';
 import { Instagram } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 export function Footer() {

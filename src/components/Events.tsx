@@ -49,16 +49,16 @@ export function Events() {
           </a>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-12 items-start mt-12">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-start mt-8 md:mt-12">
           {/* Formulario Reserva tu Mesa */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="w-full lg:w-1/2 bg-espresso p-8 md:p-12 rounded-3xl text-cream"
+            className="w-full lg:w-1/2 bg-espresso p-6 md:p-10 rounded-2xl md:rounded-3xl text-cream"
           >
-            <h3 className="font-serif text-3xl mb-8 text-center">Reserva tu Mesa</h3>
-            <form className="space-y-6">
+            <h3 className="font-serif text-2xl md:text-3xl mb-6 md:mb-8 text-center">Reserva tu Mesa</h3>
+            <form className="space-y-4 md:space-y-6">
               <div>
                 <label className="block text-sm mb-2 opacity-90">Nombre</label>
                 <input type="text" className="w-full px-4 py-3 rounded-lg bg-cream/10 border border-cream/20 focus:outline-none focus:border-terracotta text-cream placeholder-cream/50" />
@@ -109,8 +109,8 @@ export function Events() {
               className="group flex flex-col bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 border border-sand/50"
             >
               
-                <div className="relative h-48 overflow-hidden">
-                  <div className="absolute top-4 left-4 z-10 bg-cream/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-espresso uppercase tracking-wider">
+                <div className="relative h-36 md:h-48 overflow-hidden">
+                  <div className="absolute top-3 left-3 md:top-4 md:left-4 z-10 bg-cream/90 backdrop-blur-sm px-2.5 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-medium text-espresso uppercase tracking-wider">
                     {event.category}
                   </div>
                   <img
@@ -120,23 +120,23 @@ export function Events() {
                 
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex items-center gap-4 text-sm text-olive mb-3 font-medium">
+                <div className="p-4 md:p-6 flex flex-col flex-grow">
+                  <div className="flex items-center gap-3 text-xs md:text-sm text-olive mb-2 md:mb-3 font-medium">
                     <span className="flex items-center gap-1">
-                      <Calendar size={14} strokeWidth={1.5} />
+                      <Calendar size={12} strokeWidth={1.5} className="md:w-3.5 md:h-3.5" />
                       {event.date}
                     </span>
                     <span className="flex items-center gap-1">
-                      <Clock size={14} strokeWidth={1.5} />
+                      <Clock size={12} strokeWidth={1.5} className="md:w-3.5 md:h-3.5" />
                       {event.time}
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-2xl text-espresso mb-2 group-hover:text-terracotta transition-colors leading-tight">
+                  <h3 className="font-serif text-lg md:text-2xl text-espresso mb-1 md:mb-2 group-hover:text-terracotta transition-colors leading-tight">
                     {event.title}
                   </h3>
 
-                  <p className="text-espresso/70 font-light leading-relaxed">
+                  <p className="text-espresso/70 font-light text-sm md:text-base leading-relaxed">
                     {event.description}
                   </p>
                 </div>

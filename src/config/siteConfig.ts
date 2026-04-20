@@ -22,8 +22,8 @@ export const siteConfig = {
   },
   hero: {
     image:
-    'https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=1200&auto=format&fit=crop',
-    imageAlt: 'Latte Art Bistrea'
+    'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2000&auto=format&fit=crop',
+    imageAlt: 'Café de especialidad Bistrea'
   },
   pillars: {
     title: 'Café de Especialidad: Blend Kami',
@@ -36,14 +36,14 @@ export const siteConfig = {
   parallaxDividers: [
   {
     image:
-    'https://lh3.googleusercontent.com/gps-cs-s/AHVAweqeBqdb0-OPyhG8pYZjotVnStEBNQ8qV_yht9kMFSFxSIPWjgIL_M-jui4fRxg9OP0sv4ReJ-nyRH31o3Z7cVaA0Ktl0nI17D-ug4uCgw6sJ3WrYxDQtrLSgV2GZKZN-EeOJlr5=w1200',
-    alt: 'FOUR Madrid',
+    'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2000&auto=format&fit=crop',
+    alt: 'Bistrea Cafetería Elche',
     quote: 'Donde cada detalle cuenta'
   },
   {
     image:
-    'https://lh3.googleusercontent.com/gps-cs-s/AHVAwepA4MwwMtxueERm-snWaBVDHnwx8Imf5P1aG4EQGUnlik41HcCMcuUZIjII9vZuqoyD764v7PWNMtusXdIFu9yZaDXK05XXNFRC5H7VxbpModW64gkAj3PZWt_hffqkiXxwu1P6wA=w1200',
-    alt: 'FOUR Madrid gastronomía'
+    'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=2000&auto=format&fit=crop',
+    alt: 'Bistrea gastronomía'
   }],
 
   menu: {
@@ -55,12 +55,12 @@ export const siteConfig = {
 
     items: {
       todo: [
-      { name: 'Bollería Dulce y Salada', price: '1.80€', desc: 'Croissant mantequilla', image: 'https://images.unsplash.com/photo-1555507036-ab1f40ce88cb?auto=format&fit=crop&q=80&w=400' },
-      { name: 'Tartas', price: '3.80€', desc: 'Tarta de queso bistrea', image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&q=80&w=400' },
-      { name: 'Tartas Red Velvet', price: '3.80€', desc: 'Red velvet chocolate', image: 'https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?auto=format&fit=crop&q=80&w=400' },
-      { name: 'Gofres y Crepes', price: '3.40€', desc: 'Croissant relleno vi/queso', image: 'https://images.unsplash.com/photo-1629571173255-a040b1062078?auto=format&fit=crop&q=80&w=400' },
-      { name: 'Bollería Especial', price: '3.80€', desc: 'Croissant mantequilla gigante', image: 'https://images.unsplash.com/photo-1623366302587-bcaad5cf43ab?auto=format&fit=crop&q=80&w=400' },
-      { name: 'Crepes', price: '3.60€', desc: 'Croissant crepes/crepes', image: 'https://images.unsplash.com/photo-1519676860045-812e9b068da8?auto=format&fit=crop&q=80&w=400' }
+      { name: 'Bollería Dulce y Salada', price: '1.80€', desc: 'Croissant mantequilla' },
+      { name: 'Tartas', price: '3.80€', desc: 'Tarta de queso bistrea' },
+      { name: 'Tartas Red Velvet', price: '3.80€', desc: 'Red velvet chocolate' },
+      { name: 'Gofres y Crepes', price: '3.40€', desc: 'Croissant relleno vi/queso' },
+      { name: 'Bollería Especial', price: '3.80€', desc: 'Croissant mantequilla gigante' },
+      { name: 'Crepes', price: '3.60€', desc: 'Croissant crepes/crepes' }
       ]
     } as Record<string, {name: string;price: string;desc?: string;image?: string;}[]>
   },
@@ -68,12 +68,12 @@ export const siteConfig = {
     title: 'Nuestro Espacio',
     subtitle: 'Un rincón diseñado para disfrutar y compartir.',
     images: [
-    'https://lh3.googleusercontent.com/p/AF1QipMXbAIQwWs7yu2DPVCT_7T-4IYSMwZy-tteNWxm=w1200',
-    'https://lh3.googleusercontent.com/gps-cs-s/AHVAwep_55ayCfJnbUWYRjB7vP_tsT0acPu5AS59D4k30iw27SA93TOfp9g1QEqV89Bpb4xfmin3FJk2acZlIYsD4pIlz7mHLeFH2rzefkeUnW1kwqnyZVurz4vaK4A3rkli4ghqCQOdPnMhUqKv=w1200',
-    'https://lh3.googleusercontent.com/gps-cs-s/AHVAweqeBqdb0-OPyhG8pYZjotVnStEBNQ8qV_yht9kMFSFxSIPWjgIL_M-jui4fRxg9OP0sv4ReJ-nyRH31o3Z7cVaA0Ktl0nI17D-ug4uCgw6sJ3WrYxDQtrLSgV2GZKZN-EeOJlr5=w1200',
-    'https://lh3.googleusercontent.com/gps-cs-s/AHVAwepA4MwwMtxueERm-snWaBVDHnwx8Imf5P1aG4EQGUnlik41HcCMcuUZIjII9vZuqoyD764v7PWNMtusXdIFu9yZaDXK05XXNFRC5H7VxbpModW64gkAj3PZWt_hffqkiXxwu1P6wA=w1200',
-    'https://lh3.googleusercontent.com/gps-cs-s/AHVAweoBZRSv28E17Kjo32jXob9TANl2eecQHOZH31l4fMVVZqZdWhXxoLgwmEhqPI1B_FkMgwytk3BvQhmJhWqpX3iHAXwYt5XDaWizzpeWYWISDofm51sVS1zqOYgPsmoum9ZRDuL7WQ=w1200',
-    'https://lh3.googleusercontent.com/gps-cs-s/AHVAwepjVZo3U2-7rhvHnzexVmzSJr_13TUyXEBqcnnPmLCJ5k4cQujFndN2eLN0sR0IuwnTWeueRybeFhBs6Y37G_D7NuuVlqiR4HLz93SVglcim13sge2UNrkUYk6N77qOaSaOyjw=w1200']
+    'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=1200&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1453614512568-c4024d13c247?q=80&w=1200&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1200&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop']
 
   },
   events: {
