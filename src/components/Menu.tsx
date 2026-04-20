@@ -23,14 +23,21 @@ export function Menu() {
           transition={{
             duration: 0.6
           }}
-          className="text-center mb-16">
-          
-          <h2 className="font-serif text-4xl md:text-5xl text-espresso mb-4">
-            {siteConfig.menu.title}
-          </h2>
-          <p className="text-olive font-light text-lg">
-            {siteConfig.menu.subtitle}
-          </p>
+          className="mb-16">
+          <div className="flex flex-col md:flex-row gap-8 text-left items-center bg-espresso rounded-2xl p-8 shadow-md">
+            <div className="w-full md:w-1/2">
+              <h2 className="font-serif text-3xl md:text-4xl text-cream mb-4">
+                {siteConfig.menu.title}
+              </h2>
+              <div className="text-cream/90 font-light text-sm md:text-base whitespace-pre-wrap leading-relaxed">
+                {siteConfig.menu.subtitle}
+              </div>
+            </div>
+            <div className="w-full md:w-1/2 flex justify-center">
+               <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e40?q=80&w=600&auto=format&fit=crop" alt="Desayunos" className="max-w-full h-auto rounded-lg shadow-sm" />
+            </div>
+          </div>
+
         </motion.div>
 
         {/* Tabs */}
@@ -46,7 +53,7 @@ export function Menu() {
                 {isActive &&
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 bg-espresso rounded-full"
+                  className="absolute inset-0 bg-terracotta rounded-full"
                   transition={{
                     type: 'spring',
                     stiffness: 400,
@@ -86,11 +93,11 @@ export function Menu() {
               transition={{
                 duration: 0.3
               }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
               
               {siteConfig.menu.items[activeTab]?.map((item, index) =>
               <motion.div
-                key={item.name}
+                key={`${item.name}-${index}`}
                 initial={{
                   opacity: 0,
                   y: 10
@@ -103,20 +110,35 @@ export function Menu() {
                   delay: index * 0.05,
                   duration: 0.4
                 }}
-                className="flex flex-col">
+                className={item.image ? "flex flex-col bg-white rounded-lg overflow-hidden shadow-sm" : "flex flex-col"}>
                 
-                  <div className="flex justify-between items-baseline mb-1">
-                    <h4 className="font-serif text-xl text-espresso">
-                      {item.name}
-                    </h4>
-                    <div className="flex-grow border-b border-dotted border-sand mx-4 relative top-[-6px]"></div>
-                    <span className="font-medium text-terracotta">
-                      {item.price}
-                    </span>
+                  {item.image && (
+                    <div className="h-48 w-full overflow-hidden relative">
+                      <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                      <div className="absolute bottom-2 right-2 bg-espresso text-cream px-2 py-1 text-sm rounded font-medium">
+                        {item.price}
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div className={item.image ? "p-4" : ""}>
+                    <div className="flex justify-between items-baseline mb-1">
+                      <h4 className="font-serif text-xl text-espresso font-bold">
+                        {item.name}
+                      </h4>
+                      {!item.image && (
+                        <>
+                          <div className="flex-grow border-b border-dotted border-sand mx-4 relative top-[-6px]"></div>
+                          <span className="font-medium text-terracotta">
+                            {item.price}
+                          </span>
+                        </>
+                      )}
+                    </div>
+                    {item.desc &&
+                  <p className="text-sm text-olive font-light leading-relaxed">{item.desc}</p>
+                  }
                   </div>
-                  {item.desc &&
-                <p className="text-sm text-olive font-light">{item.desc}</p>
-                }
                 </motion.div>
               )}
             </motion.div>

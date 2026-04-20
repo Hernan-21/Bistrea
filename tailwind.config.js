@@ -8,11 +8,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        cream: '#F9F6F0',
-        espresso: '#2C1E16',
-        terracotta: '#C05C3D',
-        olive: '#6B705C',
-        sand: '#EAE3D2',
+        cream: '#FAF4EB',
+        espresso: '#986B4B',
+        terracotta: '#D4AB65',
+        olive: '#634A38',
+        sand: '#E3D7C5',
       },
       fontFamily: {
         serif: ['"DM Serif Display"', 'serif'],

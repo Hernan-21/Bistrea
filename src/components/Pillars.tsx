@@ -29,66 +29,34 @@ const itemVariants = {
 };
 export function Pillars() {
   return (
-    <section id="nosotros" className="py-24 md:py-32 bg-sand">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="nosotros" className="py-24 md:py-32 bg-cream">
+      <div className="max-w-6xl mx-auto px-6">
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 20
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0
-          }}
-          viewport={{
-            once: true,
-            margin: '-100px'
-          }}
-          transition={{
-            duration: 0.6
-          }}
-          className="text-center mb-16 md:mb-24">
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true, margin: '-100px' }}
+           transition={{ duration: 0.6 }}
+           className="flex flex-col md:flex-row items-center gap-12"
+        >
+          {/* Left Side: Plant Illustration */}
+          <div className="w-full md:w-1/3 flex justify-center">
+            <img 
+              src="https://images.unsplash.com/photo-1542601098-3adb3baeb1ec?q=80&w=400&auto=format&fit=crop" 
+              alt="Coffee Plant" 
+              className="w-48 h-48 object-cover rounded-full shadow-md"
+            />
+          </div>
           
-          <h2 className="font-serif text-4xl md:text-5xl text-espresso mb-6">
-            {siteConfig.pillars.title}
-          </h2>
-          <p className="max-w-2xl mx-auto text-espresso/80 text-lg font-light">
-            {siteConfig.pillars.description}
-          </p>
-        </motion.div>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{
-            once: true,
-            margin: '-100px'
-          }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
-          
-          {siteConfig.pillars.items.map((pillar, index) =>
-          <motion.div
-            key={index}
-            variants={itemVariants}
-            className="flex flex-col items-center text-center group">
-            
-              <div className="w-16 h-16 rounded-full bg-cream flex items-center justify-center text-terracotta mb-6 group-hover:bg-terracotta group-hover:text-cream transition-colors duration-300">
-                {getIcon(pillar.iconName, {
-                size: 32,
-                strokeWidth: 1
-              })}
-              </div>
-              <h3 className="font-serif text-2xl text-espresso mb-3">
-                {pillar.title}
-              </h3>
-              <p className="text-espresso/70 font-light leading-relaxed">
-                {pillar.description}
-              </p>
-            </motion.div>
-          )}
+          {/* Right Side: Text content */}
+          <div className="w-full md:w-2/3 text-left">
+            <h2 className="font-serif text-3xl md:text-4xl text-espresso mb-6">
+              {siteConfig.pillars.title}
+            </h2>
+            <div className="text-espresso/90 text-sm md:text-base font-medium whitespace-pre-wrap leading-relaxed">
+              {siteConfig.pillars.description}
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>);
-
 }

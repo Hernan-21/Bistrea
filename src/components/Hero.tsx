@@ -69,6 +69,14 @@ export function Hero() {
           <p className="text-lg md:text-xl text-olive font-light tracking-widest uppercase mt-6 mb-12">
             {siteConfig.brand.subtitle}
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+             <a href="#carta" className="bg-terracotta text-cream px-8 py-3 rounded-full hover:bg-espresso transition-colors font-medium">
+               ¡Ven a probar la tarta de queso!
+             </a>
+             <a href="#eventos" className="border border-terracotta text-terracotta px-8 py-3 rounded-full hover:bg-terracotta hover:text-cream transition-colors font-medium">
+               Reserva tu Taller
+             </a>
+          </div>
         </motion.div>
       </motion.div>
 
